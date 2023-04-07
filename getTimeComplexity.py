@@ -1,5 +1,5 @@
 import time
-
+import numpy as np
 def my_image_processing_algorithm(image):
     # Replace with your image processing algorithm
     return processed_image

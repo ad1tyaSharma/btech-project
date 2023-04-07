@@ -95,9 +95,3 @@ def dhe(img, alpha=0.5):
     result[result>255] = 255
     result[result<0] = 0
     return result.astype(np.uint8)
-image = cv2.imread('dataset/1.png')
-img_dhe = dhe (image)
-
-cv2.imshow("DHE Image",img_dhe)
-cv2.waitKey(0)
-cv2.destroyAllWindows()

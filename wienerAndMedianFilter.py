@@ -1,7 +1,4 @@
-
 import cv2
-
-from scipy.signal import wiener
 # Load the image
 def wienerAndMedianFilter(img):
     img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
@@ -19,10 +16,4 @@ def wienerAndMedianFilter(img):
     img_filtered = cv2.cvtColor(img_yuv_filtered, cv2.COLOR_YUV2BGR)
     median_filtered = cv2.medianBlur(img_filtered, 5)
     return median_filtered
-# Display the original, bilateral-filtered, and median-filtered images side by side
-image = cv2.imread('dataset/1.png')
-filtered = wienerAndMedianFilter(image)
-cv2.imshow('Original Image', image)
-cv2.imshow('Filtered Image', filtered)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+
