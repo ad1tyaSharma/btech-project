@@ -18,4 +18,6 @@ def getTimeComplexity(img,algo):
     plt.plot(range(100, 2000, 100), times)
     plt.xlabel('Image Size')
     plt.ylabel('Execution Time (seconds)')
+    plt.title('CLAHE')
     plt.show()
+#getTimeComplexity(cv2.imread('dataset/1.png'), clahe)

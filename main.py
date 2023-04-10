@@ -18,7 +18,7 @@ def getEfficiencyParameters(imgA,imgB):
 
 if __name__ == "__main__":
     # read image from dataset
-    img = cv2.imread('dataset/3.png')
+    img = cv2.imread('dataset/1.png')
     print(f'SNR of input image is: {getSNR(img)}' )
     plt.imshow(img)
     choice1 = input("Enter 'yes' to apply denoising filter: ")
