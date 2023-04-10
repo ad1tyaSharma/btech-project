@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def getTimeComplexity(img,algo):
     times = []
     # Vary the size of the image and calculate the execution time for each size
-    for i in range(100, 2000, 100):
+    for i in range(1, 1000, 100):
         resized_img = cv2.resize(img, (i, i))
         start_time = time.time()
         equalized_img = algo(resized_img)
@@ -15,7 +15,9 @@ def getTimeComplexity(img,algo):
         times.append(end_time - start_time)
     
     # Plot the graph
-    plt.plot(range(100, 2000, 100), times)
+    plt.plot(range(1, 1000, 100), times)
     plt.xlabel('Image Size')
     plt.ylabel('Execution Time (seconds)')
     plt.show()
+
+getTimeComplexity(cv2.imread('dataset/3.png'), dhe)

@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 # Load the image
 def wienerAndMedianFilter(img):
     img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
