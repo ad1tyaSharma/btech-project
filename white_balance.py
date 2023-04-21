@@ -6,7 +6,7 @@ import numpy as np
 # Calculate the color balance using gray world algorithm
 def white_balance(img):
  avg_color = np.average(img, axis=(0,1))
- grey_world_balance = np.array([128, 128, 128]) / avg_color
+ grey_world_balance = np.array([124, 124, 124]) / avg_color
 
  # Apply the color balance to the image
  corrected_img = np.zeros_like(img)
@@ -14,7 +14,7 @@ def white_balance(img):
     corrected_img[:,:,i] = cv2.multiply(img[:,:,i], grey_world_balance[i])
 
  # Display the original and corrected image
- return corrected_img
+
  blurred = cv2.GaussianBlur(corrected_img, (3,3), 0)
 
 # calculate the unsharp mask by subtracting the blurred image from the original image
