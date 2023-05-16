@@ -19,4 +19,4 @@ def white_balance(img):
 
 # calculate the unsharp mask by subtracting the blurred image from the original image
  unsharp_mask = cv2.addWeighted(corrected_img, 1.5, blurred, -0.5, 0)
- return unsharp_mask
+ return corrected_img
